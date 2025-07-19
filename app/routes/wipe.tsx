@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
 const WipeApp = () => {
@@ -49,13 +49,19 @@ const WipeApp = () => {
                     </div>
                 ))}
             </div>
-            <div>
+            <div className="mt-4 flex ">
                 <button
                     className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
                     onClick={() => handleDelete()}
                 >
                     Wipe App Data
                 </button>
+                <Link
+                    to="/"
+                    className="bg-gray-500 text-white px-4 py-2 rounded-md cursor-pointer ml-2"
+                >
+                    Back to homepage
+                </Link>
             </div>
         </div>
     );
